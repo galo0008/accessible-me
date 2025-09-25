@@ -75,6 +75,25 @@ form button {
   padding: 2rem 0;
 }
 
+.skip-link{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skip-link a{
+  position: absolute;
+  top: -3em;
+  background-color: #000;
+  color: #fff;
+  padding: .5em 1em;
+  font-weight: bold;
+}
+
+.skip-link a:focus{
+  top: 0;
+}
+
 
 
 
