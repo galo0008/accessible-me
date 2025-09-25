@@ -16,9 +16,10 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container" itemscope itemtype="https://schema.org/LocalBusiness">
-     <header class="site-header" role="banner"
-     
-    <h1 itemprop="name">Jam Box Studios</h1>
+     <header class="site-header" role="banner">
+  <h1 itemprop="name">Jam Box Studios</h1>
+</header>
+
 
       <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <ul>
@@ -28,46 +29,57 @@
           <li><a href="#">Studio</a></li>
         </ul>
       </nav>
-    <img src="https://picsum.photos/1200/900" class="banner" alt="Jam Box Studios banner image">
+
+    <img src="https://picsum.photos/1200/900" class="banner" alt="Jam Box Studios banner ">
 
     </div>
     <main id="main-content" role="main">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
+      <section class="owner" itemscope itemtype="https://schema.org/Person" aria-label="Owner Info">
+        <h2>Meet the owner</h2>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li><span itemprop="name">John Doe</span></li>
+          <li><span itemprop="jobTitle">CEO</span></li>
+          <li>Email: <a href="mailto:johnjoe@jambox.ca" itemprop="email">johnjoe@jambox.ca</a></li>
+          <li>Phone: <a href="tel:6130000000" itemprop="telephone">613-000-0000</a></li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
+      </section>
+      <section class="address" aria-label="Address Info">
+        <h2>Address</h2>
+        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="name">Jam Box Studios</span><br>
+          <span itemprop="streetAddress">123 Guitar Road</span>,<br>
+          <span itemprop="addressLocality">Musicville</span>,<br>
+          <span itemprop="addressRegion">Danceistan</span><br>
+          <span itemprop="postalCode">B3T 0L0</span>
         </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+      </section>
+       <section class="contact-section" aria-label="Contact Form">
+        <h2>Contact Us</h2>
+        <form action="thanks.html" role="form">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Full Name" required aria-required="true">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject">
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" required aria-required="true"></textarea>
+
           <button type="submit">Send</button>
         </form>
-      </div>
-    </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
-    </div>
-  </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+      <p><small>&copy; 2021 Jam Box Studios.</small></p>
+    </footer>
+ 
 </body>
 
 </html>
